@@ -170,7 +170,8 @@ function addAttendeeToApi() {
 }
 
 //Update Attendee *************************************************************************
-async function updateAttendee(attendee) {
+function updateAttendee() {
+  debugger;
   const editAttendeeFirstname = editAttendeeFormElement.querySelector(
     "#edit-attendee-firstname"
   );
@@ -189,7 +190,7 @@ async function updateAttendee(attendee) {
     age: editAttendeeAge.value,
   };
 
-  return fetch("http://localhost:3000/attendees/" + attendee.id, {
+  return fetch("http://localhost:3000/attendees/" + updatedAttendee.id, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -228,7 +229,7 @@ newAttendeeFormElement.addEventListener("submit", (e) => {
 
 editAttendeeFormElement.addEventListener("submit", (e) => {
   e.preventDefault();
-  //updateAttendee();
+  updateAttendee();
 });
 
 deleteAllButton.addEventListener("click", deleteAllAttendees);
