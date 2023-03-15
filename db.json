@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "attendees": [
+    {
+      "firstname": "Katharina",
+      "lastname": "Ephan",
+      "age": "28",
+      "id": 1
+    },
+    {
+      "firstname": "Muriel",
+      "lastname": "Cishek",
+      "age": "29",
+      "id": 2
+    },
+    {
+      "firstname": "Kirsten",
+      "lastname": "Anders",
+      "age": "56",
+      "id": 3
+    },
+    {
+      "firstname": "Joe Ray",
+      "lastname": "Gregory",
+      "age": "33",
+      "id": 4
+    },
+    {
+      "firstname": "Sarah",
+      "lastname": "Märdian",
+      "age": "27",
+      "id": 5
+    },
+    {
+      "firstname": "Nico",
+      "lastname": "König",
+      "age": "35",
+      "id": 6
+    },
+    {
+      "firstname": "Mareike",
+      "lastname": "Kirch",
+      "age": "31",
+      "id": 7
+    }
+  ]
+}

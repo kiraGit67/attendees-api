@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendee API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Attendees @ Coding Bootcamp Europe</h1>
+    </header>
+    <main>
+        <form id="add-new">
+            <div class="input-wrapper">
+                <label for="new-attendee-firstname">Firstname</label>
+                <input type="text" name="new-attendee-firstname" id="new-attendee-firstname">
+            </div>
+            <div class="input-wrapper">
+                <label for="new-attendee-lastname">Lastname</label>
+                <input type="text" name="new-attendee-lastname" id="new-attendee-lastname">
+            </div>
+            <div class="input-wrapper">
+                <label for="new-attendee-age">Age</label>
+                <input type="text" name="new-attendee-age" id="new-attendee-age">
+            </div>
+            <div class="input-wrapper">
+                <label for="add-new-attendee"></label>
+                <button type="submit" id="add-new-attendee">Add New Attendee</button>
+            </div>
+        </form>
+        <form id="edit">
+            <div class="input-wrapper">
+                <label for="edit-attendee-firstname">Firstname</label>
+                <input type="text" name="edit-attendee-firstname" id="edit-attendee-firstname">
+            </div>
+            <div class="input-wrapper">
+                <label for="edit-attendee-lastname">Lastname</label>
+                <input type="text" name="edit-attendee-lastname" id="edit-attendee-lastname">
+            </div>
+            <div class="input-wrapper">
+                <label for="edit-attendee-age">Age</label>
+                <input type="text" name="edit-attendee-age" id="edit-attendee-age">
+            </div>
+            <div class="input-wrapper">
+                <label for="edit-attendee"><input type="hidden" name="attendee-id" id="attendee-id"></label>
+                <button type="submit" id="edit-attendee">Edit Attendee</button>
+            </div>
+        </form>
+        <button type="button" id="delete-all">Delete All</button>
+        <ul id="attendee-list"></ul>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
