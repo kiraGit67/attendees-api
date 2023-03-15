@@ -69,29 +69,6 @@ function createListEntry(
     editAttendeeLastname.value = attendeeLastName;
     editAttendeeAge.value = attendeeAge;
     editAttendeeID.value = attendeeID;
-    /*
-    const updatedAttendee = {
-      id: attendeeID,
-      firstname: attendeeFirstName,
-      lastname: attendeeLastName,
-      age: attendeeAge,
-    };
-
-    fetch("http://localhost:3000/attendees/" + attendeeID, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(updatedAttendee),
-    })
-      .then((response) => response.json())
-      .then((updatedAttendeeFromApi) => {
-        console.log(updatedAttendeeFromApi);
-        newAttendeeFirstname.value = attendeeFirstName;
-        newAttendeeLastname.value = attendeeLastName;
-        newAttendeeAge.value = attendeeAge;
-      });
-    */
   });
 
   const deleteLi = document.createElement("button");
@@ -102,7 +79,7 @@ function createListEntry(
       method: "DELETE",
     })
       .then((response) => response.json())
-      .then(() => render());
+      .then(() => getAllAttendees());
   });
 
   const liText = document.createTextNode(
@@ -115,6 +92,8 @@ function createListEntry(
 }
 
 function render() {
+  listElement.innerHTML = "";
+
   for (let attendee of state.attendees) {
     if (
       attendee.firstname &&
@@ -164,7 +143,8 @@ function addAttendeeToApi() {
       .then((response) => response.json())
       .then((newAttendeeFromApi) => {
         attendees.push(newAttendeeFromApi);
-        render();
+        getAllAttendees();
+        //render();
       });
   }
 }
@@ -199,7 +179,7 @@ function updateAttendee() {
   })
     .then((response) => response.json())
     .then(() => {
-      render();
+      getAllAttendees();
     });
 }
 

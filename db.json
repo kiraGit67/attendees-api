@@ -18,16 +18,16 @@
   },
   "attendees": [
     {
+      "id": 1,
       "firstname": "Katharina",
       "lastname": "Ephan",
-      "age": "28",
-      "id": 1
+      "age": "27"
     },
     {
+      "id": 2,
       "firstname": "Muriel",
       "lastname": "Cishek",
-      "age": "29",
-      "id": 2
+      "age": "30"
     },
     {
       "firstname": "Kirsten",
@@ -58,6 +58,12 @@
       "lastname": "Kirch",
       "age": "31",
       "id": 7
+    },
+    {
+      "id": 8,
+      "firstname": "Isabella",
+      "lastname": "Di Cagno Robledo",
+      "age": "32"
     }
   ]
 }
