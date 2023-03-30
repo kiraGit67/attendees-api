@@ -142,7 +142,7 @@ function addAttendeeToApi() {
     })
       .then((response) => response.json())
       .then((newAttendeeFromApi) => {
-        attendees.push(newAttendeeFromApi);
+        state.attendees.push(newAttendeeFromApi);
         getAllAttendees();
         //render();
       });
@@ -151,7 +151,6 @@ function addAttendeeToApi() {
 
 //Update Attendee *************************************************************************
 function updateAttendee() {
-  debugger;
   const editAttendeeFirstname = editAttendeeFormElement.querySelector(
     "#edit-attendee-firstname"
   );
